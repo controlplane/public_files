@@ -1,0 +1,266 @@
+Host mx3
+	HostName		www.controlplane.cc
+	Port			22
+	User			root
+	IdentityFile		~/.ssh/private/private_rsa
+	IdentitiesOnly		yes
+	ProxyJump		jump
+
+Host hydra
+	HostName		cloud.controlplane.cc
+	Port			22
+	User			root
+	IdentityFile		~/.ssh/private/private_rsa
+	IdentitiesOnly		yes
+	ProxyJump		jump
+
+
+Host draschl.com
+	HostName		192.168.181.13
+	Port			22
+	User			draschl-com-wp
+	IdentityFile		~/.ssh/private/private_rsa
+        ProxyCommand 		ssh jump@217.196.152.122 -W %h:%p
+
+Host nas
+	Hostname		192.168.10.10
+	Port			1022
+	User			admin
+	IdentityFile		~/.ssh/private/private_rsa
+	ProxyJump		jump
+
+Host tron
+	Hostname		192.168.10.15
+	User			root
+	IdentityFile		~/.ssh/svcuser/id_rsa
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host virt1
+	Hostname		192.168.99.241
+	User			root
+	IdentityFile		~/.ssh/svcuser/id_rsa
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host virt2
+	Hostname		192.168.99.242
+	User			root
+	IdentityFile		~/.ssh/svcuser/id_rsa
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host virt3
+	Hostname		192.168.99.243
+	User			root
+	IdentityFile		~/.ssh/svcuser/id_rsa
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host virt4
+	Hostname		192.168.99.244
+	User			root
+	IdentityFile		~/.ssh/svcuser/id_rsa
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host virt5
+	Hostname		192.168.99.245
+	User			root
+	IdentityFile		~/.ssh/svcuser/id_rsa
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host pbs
+	Hostname		192.168.99.20
+	User			root
+	IdentityFile		~/.ssh/svcuser/id_rsa
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host callisto
+	Hostname		192.168.10.142
+#	Hostname		callisto.int.draschl-rainer.at
+	User			root
+	IdentityFile		~/.ssh/private/private_rsa
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host ganymed
+	Hostname		ganymed.int.draschl-rainer.at
+	User			root
+	IdentityFile		~/.ssh/private/private_rsa
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host adns1
+	Hostname		192.168.53.53
+	User			root
+	IdentityFile		~/.ssh/svcuser/id_rsa
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host adns2
+	Hostname		192.168.53.54
+	User			root
+	IdentityFile		~/.ssh/svcuser/id_rsa
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host rdns1
+	Hostname		192.168.53.153
+	User			root
+	IdentityFile		~/.ssh/svcuser/id_rsa
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host rdns2
+	Hostname		192.168.53.154
+	User			root
+	IdentityFile		~/.ssh/svcuser/id_rsa
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+#Host ansible
+#	Hostname		192.168.10.12
+#	User			ansible
+#	IdentityFile		~/.ssh/private/private_rsa
+#        ForwardAgent 		yes
+
+Host jump
+	Hostname		jump.k39
+	User			jump
+	IdentityFile		~/.ssh/svcuser/id_rsa
+        ForwardAgent 		yes
+	IdentitiesOnly		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+
+
+Host pallas
+	Hostname		pallas.draschl-rainer.at
+	User			root
+	IdentityFile		~/.ssh/svcuser/id_rsa
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+
+Host switch
+	Hostname		192.168.10.11
+	User			admin
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host rdns01
+	Hostname		192.168.53.153
+	User			root
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host rdns02
+	Hostname		192.168.53.154
+	User			root
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host db01
+	Hostname		db01.svc.draschl-rainer.at
+	User			root
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host db02
+	Hostname		db02.svc.draschl-rainer.at
+	User			root
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host edge01
+	Hostname		192.168.200.101
+	User			root
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+        IdentityFile            ~/.ssh/svcuser/id_rsa
+
+Host edge02
+	Hostname		192.168.200.102
+	User			root
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+        IdentityFile            ~/.ssh/svcuser/id_rsa
+
+Host auth01
+	Hostname		192.168.200.11
+	User			root
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host auth02
+	Hostname		192.168.200.12
+	User			root
+        ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+Host bastion
+	Hostname		192.168.200.100
+	User			root
+    ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+
+Host *.k39
+	IdentityFile	~/.ssh/svcuser/id_rsa
+	User			root
+
+Host *
+#   IdentityFile           ~/.ssh/private/private_rsa
+    SendEnv 		-LC_* -LANG
+	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
