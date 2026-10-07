@@ -2,7 +2,7 @@ Host mx3
 	HostName		www.controlplane.cc
 	Port			22
 	User			root
-	IdentityFile		~/.ssh/private/private_rsa
+	IdentityFile		~/.ssh/private/private_ed25519
 	IdentitiesOnly		yes
 	ProxyJump		jump
 
@@ -10,7 +10,7 @@ Host hydra
 	HostName		cloud.controlplane.cc
 	Port			22
 	User			root
-	IdentityFile		~/.ssh/private/private_rsa
+	IdentityFile		~/.ssh/private/private_ed25519
 	IdentitiesOnly		yes
 	ProxyJump		jump
 
@@ -19,14 +19,14 @@ Host draschl.com
 	HostName		192.168.181.13
 	Port			22
 	User			draschl-com-wp
-	IdentityFile		~/.ssh/private/private_rsa
+	IdentityFile		~/.ssh/private/private_ed25519
         ProxyCommand 		ssh jump@217.196.152.122 -W %h:%p
 
 Host nas
 	Hostname		192.168.10.10
 	Port			1022
 	User			admin
-	IdentityFile		~/.ssh/private/private_rsa
+	IdentityFile		~/.ssh/private/private_ed25519
 	ProxyJump		jump
 
 Host tron
@@ -96,7 +96,7 @@ Host callisto
 	Hostname		192.168.10.142
 #	Hostname		callisto.int.draschl-rainer.at
 	User			root
-	IdentityFile		~/.ssh/private/private_rsa
+	IdentityFile		~/.ssh/private/private_ed25519
         ForwardAgent 		yes
 	ForwardX11		yes
 	ForwardX11Trusted	yes
@@ -105,7 +105,7 @@ Host callisto
 Host ganymed
 	Hostname		ganymed.int.draschl-rainer.at
 	User			root
-	IdentityFile		~/.ssh/private/private_rsa
+	IdentityFile		~/.ssh/private/private_ed25519
         ForwardAgent 		yes
 	ForwardX11		yes
 	ForwardX11Trusted	yes
@@ -150,7 +150,7 @@ Host rdns2
 #Host ansible
 #	Hostname		192.168.10.12
 #	User			ansible
-#	IdentityFile		~/.ssh/private/private_rsa
+#	IdentityFile		~/.ssh/private/private_ed25519
 #        ForwardAgent 		yes
 
 Host jump
@@ -166,7 +166,7 @@ Host jump
 Host pallas
 	Hostname		pallas.draschl-rainer.at
 	User			root
-	IdentityFile		~/.ssh/svcuser/id_rsa
+	IdentityFile		~/.ssh/private/private_ed25519
         ForwardAgent 		yes
 	ForwardX11		yes
 	ForwardX11Trusted	yes
@@ -220,7 +220,7 @@ Host edge01
 	ForwardX11		yes
 	ForwardX11Trusted	yes
 	ProxyJump		jump
-        IdentityFile            ~/.ssh/svcuser/id_rsa
+        IdentityFile            ~/.ssh/private/private_ed25519
 
 Host edge02
 	Hostname		192.168.200.102
@@ -229,7 +229,7 @@ Host edge02
 	ForwardX11		yes
 	ForwardX11Trusted	yes
 	ProxyJump		jump
-        IdentityFile            ~/.ssh/svcuser/id_rsa
+        IdentityFile            ~/.ssh/private/private_ed25519
 
 Host auth01
 	Hostname		192.168.200.11
@@ -261,6 +261,6 @@ Host *.k39
 	User			root
 
 Host *
-#   IdentityFile           ~/.ssh/private/private_rsa
+#   IdentityFile           ~/.ssh/private/private_ed25519
     SendEnv 		-LC_* -LANG
 	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
