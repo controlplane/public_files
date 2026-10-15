@@ -255,6 +255,15 @@ Host bastion
 	ForwardX11Trusted	yes
 	ProxyJump		jump
 
+Host dockhand
+	Hostname		192.168.53.52
+	User			root
+    ForwardAgent 		yes
+	ForwardX11		yes
+	ForwardX11Trusted	yes
+	ProxyJump		jump
+
+
 
 Host *.k39
 	IdentityFile	~/.ssh/svcuser/id_rsa
